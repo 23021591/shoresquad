@@ -157,6 +157,127 @@ body {
     margin-top: 2rem;
 }
 
+/* Weather Cards */
+.weather-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+}
+
+.weather-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.weather-card-header h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.weather-card-body {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.temperature {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.temperature .high {
+    color: var(--color-accent);
+}
+
+.temperature .low {
+    color: var(--color-primary);
+}
+
+.wind, .precipitation, .beach-condition {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.condition-good {
+    border-left: 4px solid var(--color-secondary);
+}
+
+.condition-warning {
+    border-left: 4px solid var(--color-accent);
+}
+
+.condition-bad {
+    border-left: 4px solid #dc3545;
+}
+
+/* Map Controls */
+.custom-map-control {
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.custom-map-control:hover {
+    background-color: #f4f4f4;
+}
+
+.custom-map-control i {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+/* Map InfoWindow Styles */
+.gm-style .gm-style-iw {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    max-width: 300px;
+}
+
+.cleanup-event-info {
+    padding: 0.5rem;
+}
+
+.cleanup-event-info h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cleanup-event-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.cleanup-event-info .event-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--color-text);
